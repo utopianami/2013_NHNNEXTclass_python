@@ -13,7 +13,7 @@ transfer = 1
 
 #카드 충전 및 카드 상태설정
 usercard_money = input("얼마를 충전하시겠습니까? : ")
-usercard_age = input("당신의 연령은 ?(청소년 = 0, 어른 =1) : ")기
+usercard_age = input("당신의 연령은 ?(청소년 = 0, 어른 =1) : ")
 
 #연령설정에 따른 기본료, 환승료
 def age():
@@ -23,8 +23,6 @@ def age():
 	else:
 		basic_cost = 1000
 		transfer_cost = 100
-#최초 탑승 함수
-def first_use():
 
 
 while transfer == 1:
