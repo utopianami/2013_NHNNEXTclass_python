@@ -79,11 +79,10 @@ class station():
 			
 
 
-#사람정의 / 카드 구입 / 지하철역 선정 / 환승체크 변수 선언
+#사람정의 / 카드 구입 / 지하철역 선정 /
 user = human()
 Tmoney = card()
 konkuk = station()
-a = 0
 
 #user 정보 정리 / 카드 충전
 user.name = raw_input("what is your name? : ")
