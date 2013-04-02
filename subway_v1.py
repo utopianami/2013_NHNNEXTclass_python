@@ -25,9 +25,7 @@ class human():
 
 	def brain(self):
 		self.decision = input ('탑승(환승) 하시겠습니까? (yes = 1, no = 2)')
-	def brain2(self):
-		a = input ('탑승(환승) 하시겠습니까? (yes = 1, no = 2)')
-
+	
 class card():
 	basic_price = 0
 	transfer_price = 0
