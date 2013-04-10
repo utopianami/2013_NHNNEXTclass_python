@@ -30,6 +30,9 @@ class human():
 	def complete_transfer(self): #환승 후 이전교통정보를 환승교통정보로 변경 
 		self.traffic = self.traffic_transfer
 
+	def get_name(self):
+		return self.name
+
 #card_class
 class card():
 	def __init__(self, age, money): #나이를 연령으로 변경
@@ -48,11 +51,11 @@ class card():
 
 #Station_class
 
-class station():
+class station(card):
 	payment = 0
 
 	def __init__(self, generation): #연령에 따라 기본요금/환승요금 설정
-		if cardName.generation == 1:
+		if self.generation == 1:
 			self.basic_price = 900
 			self.transfer_price = 50
 		else:
@@ -86,7 +89,7 @@ class station():
 			cardName.money = input('얼마를 충전하시겠습니까? : ')
 			cardName.transfer_num = cardName.transfer_num -1 #환승카운트 올리지 않기
 	def exit_message(self):
-		print "이용해주셔서 감사합니다."
+		print "\n\n이용해주셔서 감사합니다."
 
 '''
 activity_door 클래스 내부의 
@@ -107,7 +110,7 @@ select_traffic = input ('어떤 교통을 이용하시겠습니까?(버스=1, �
 #making object
 userName = human(userName, userAge, select_traffic)
 cardName = card(userName.age, Charege_money)
-stationName = station(cardName.generation)
+stationName = station(card)
 
 while 1:
 
@@ -121,3 +124,9 @@ while 1:
 		break
 
 stationName.exit_message()
+
+
+
+
+
+
