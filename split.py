@@ -6,8 +6,7 @@ file = open('error_log', 'r')
 readLine = file.readlines() 
 
 
-#2 num_error
-
+#2 count_error
 error_num = 0
 def count_error(text):
 	text = text.split('[:]')
@@ -17,7 +16,7 @@ def count_error(text):
 		else:
 			pass
 
+
+#
 count_error(readLine)
-
-
 print error_num
