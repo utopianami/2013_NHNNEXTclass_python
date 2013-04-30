@@ -34,10 +34,10 @@ try :
 	readLine = origin_file2.readlines() 
 
 except IOError:
-	print "input& output!!OMG!!!!!!"
+	print "input& output!!\nOMG!!!!!!"
 
 except:
 	print "OMG!!!!"
 
 finally :
-	print "good man~"
+	print "Yo~Man~\ngood man~"
