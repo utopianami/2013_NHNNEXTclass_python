@@ -7,8 +7,8 @@ test_str = '[Fri Oct 05 08:18:16 2012] [error] [client ::1] File does not exist:
 
 
 def find_error(find_str):
-	find_str = test_str.split('[:]')
-	print
+	find = find_str.split('[:]')
+	print find
 
 	for word in find_str:
 		if word == '[error]':
