@@ -48,19 +48,18 @@ def make_log(origin):
 
 			elif parsing[0].find('Invalid') != -1 :
 				num_Invalid += 1
-				dic_errorlog['Invalid URI in request GET invalid'].append(parsing[1])
-
-			elif parsing[0].find('script') != -1 :
+				
+			elif parsing[0].find('stat') != -1 :
 				num_script += 1
 				dic_errorlog['script not found or unable to stat'].append(parsing[1])
 
-			elif parsing[0].find('client') != -1 :
+			elif parsing[0].find('configuration') != -1 :
 				num_client += 1
 				dic_errorlog['client denied by server configuration'].append(parsing[1])
 
 			elif parsing[0].find('attempt') != -1 :
 				num_attempt += 1
-				dic_errorlog['ttempt to invoke directory as script'].append(parsing[1])
+				dic_errorlog['attempt to invoke directory as script'].append(parsing[1])
 
 	#print [Summary]
 	print '[Summary]\n'
